@@ -1,40 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando Numero</title>
-</head>
 <style>
-    body{
-        font: 18pt arial;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
-    input {
-        font: normal 18pt arial;
-        width: 100px;
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #6dd5ed, #2193b0);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
     }
-    div#res{
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+        font-size: 1.2em;
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        color: #333;
+    }
+
+    input[type="button"] {
+        background-color: #fff;
+        color: #2193b0;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        margin-top: 10px;
+    }
+
+    input[type="button"]:hover {
+        background-color: #2193b0;
+        color: #fff;
+    }
+
+    #res {
         margin-top: 20px;
+        font-size: 1.3em;
+        color: #fff;
+    }
+
+    strong {
+        color: #ffeb3b;
     }
 </style>
-<body>
-
-    <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1">
-    <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
-    <div id="res">Resultados</div>
-
-<script>
-    function somar (){
-        var tn1 = window.document.getElementById('txtn1')
-        var tn2 =window.document.querySelector('input#txtn2')
-        var res = window.document.getElementById('res')
-        var n1 = Number(tn1.value)
-        var n2 = Number(tn2.value)
-        var s = n1 + n2
-        res.innerHTML = `a soma entre ${n1} e ${n2} e igual a <strong>${s}<strong>`
-    }
-</script>
-</body>
-</html>
